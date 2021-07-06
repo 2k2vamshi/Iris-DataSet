@@ -53,7 +53,6 @@ df.head()
 print('Rows :',df.shape[0])
 print('Columns :',df.shape[1])
 
-"""Now, when we train any algorithm, the number of features and their correlation plays an important role. If there are features and many of the features are highly correlated, then training an algorithm with all the featues will reduce the accuracy. Thus features selection should be done carefully. This dataset has less featues but still we will see the correlation."""
 
 df.describe()
 
@@ -71,7 +70,6 @@ fig=plt.gcf()
 fig.set_size_inches(10,6)
 plt.show()
 
-"""The above graph shows relationship between the sepal length and width. Now we will check relationship between the petal length and width."""
 
 fig = iris[iris.Species=='Iris-setosa'].plot.scatter(x='PetalLengthCm',y='PetalWidthCm',color='orange', label='Setosa')
 iris[iris.Species=='Iris-versicolor'].plot.scatter(x='PetalLengthCm',y='PetalWidthCm',color='blue', label='versicolor',ax=fig)
